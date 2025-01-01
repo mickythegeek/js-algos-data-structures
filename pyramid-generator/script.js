@@ -1,2 +1,3 @@
 let character = "Hello";
-let secondCharacter = "Test";
+let count = 8;
+let rows = [];
