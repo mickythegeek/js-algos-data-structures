@@ -14,8 +14,14 @@ console.log(call);
 //     rows.push(padRow(i, count));
 // }
 
+/*
 while(rows.length < count){
     rows.push(padRow(rows.length + 1, count));
+}
+*/
+
+for (let i = count; i > 0; i--){
+    rows.push(padRow(i, count));
 }
 
 let result = "";
