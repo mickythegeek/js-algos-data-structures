@@ -9,9 +9,10 @@ function padRow(rowNumber, rowCount){
 const call = padRow();
 console.log(call);
 
-for(let i = 0; i < count; i++){
-    rows.push(padRow(i+1, count));
-}
+// TODO: Use a different type of loop
+// for(let i = 1; i <= count; i++){
+//     rows.push(padRow(i, count));
+// }
 
 let result = "";
 
