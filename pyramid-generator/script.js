@@ -2,6 +2,12 @@ const character = "#";
 const count = 8;
 const rows = [];
 
+function padRow(rowNumber, rowCount){
+}
+
+const call = padRow();
+console.log(call);
+
 for(let i = 0; i < count; i++){
     rows.push(character.repeat(i+1));
 }
