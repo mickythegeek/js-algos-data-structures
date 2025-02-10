@@ -88,6 +88,9 @@ function buyHealth() {
   gold -= 10;
   // increase player health by 10
   health += 10;
+  // update text for gold and health
+  goldText.innerText = gold;
+  healthText.innerText = health;
 }
 function buyWeapon() {}
 function fightSlime() {}
