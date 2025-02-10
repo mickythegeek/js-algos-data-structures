@@ -23,6 +23,11 @@ function goStore(){
     button2.innerText = "Buy weapon (30 gold)";
     button3.innerText = "Go to town square";
 
+
+    // change button actions
+    button1.onclick = buyHealth;
+    button2.onclick = buyWeapon;
+    button3.onclick = goTownSquare;
 }
 
 function goCave(){
