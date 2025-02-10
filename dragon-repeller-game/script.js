@@ -86,6 +86,8 @@ function fightDragon() {
 function buyHealth() {
   // reduce player gold by 10
   gold -= 10;
+  // increase player health by 10
+  health += 10;
 }
 function buyWeapon() {}
 function fightSlime() {}
