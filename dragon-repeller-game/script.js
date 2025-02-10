@@ -83,7 +83,10 @@ function fightDragon() {
 
 
 // create functions for buttons
-function buyHealth() {}
+function buyHealth() {
+  // reduce player gold by 10
+  gold -= 10;
+}
 function buyWeapon() {}
 function fightSlime() {}
 function fightBeast() {}
