@@ -18,9 +18,20 @@ const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
 const locations = [];
 
+// create cat objects
+const cat = {
+    name: "Whiskers"
+};
+console.log(cat);
+
 function update(location){
 
 }
+
+// initialize buttons
+button1.onclick = goStore;
+button2.onclick = goCave;
+button3.onclick = fightDragon;
 
 // create functions for buttons
 function goTownSquare() {
@@ -59,10 +70,7 @@ function goCave() {
 function fightDragon() {
   console.log("FIghting dragon.");
 }
-// initialize buttons
-button1.onclick = goStore;
-button2.onclick = goCave;
-button3.onclick = fightDragon;
+
 
 // create functions for buttons
 function buyHealth() {}
