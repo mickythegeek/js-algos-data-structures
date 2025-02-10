@@ -119,7 +119,8 @@ function buyHealth() {
 function buyWeapon() {
   if (gold >= 30){
     gold -= 30;
-    currentWeaponIndex +=1;
+    // add weapon to inventory
+    currentWeaponIndex ++;
   }
 }
 function fightSlime() {}
