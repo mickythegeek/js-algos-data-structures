@@ -84,13 +84,20 @@ function fightDragon() {
 
 // create functions for buttons
 function buyHealth() {
-  // reduce player gold by 10
+  if (gold >= 10){
+    // reduce player gold by 10
   gold -= 10;
   // increase player health by 10
   health += 10;
   // update text for gold and health
   goldText.innerText = gold;
   healthText.innerText = health;
+
+  // update text to show player does not have enough gold
+  } else{
+    text.innerText = "You do not have enough gold to buy health.";
+   }
+  
 }
 function buyWeapon() {}
 function fightSlime() {}
