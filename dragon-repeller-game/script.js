@@ -18,7 +18,8 @@ const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
 
 function goStore(){
-    console.log("Going to store.");
+    // change text
+    button1.innerText = "Buy 10 health (10 gold)";
 
 }
 
