@@ -16,13 +16,19 @@ const goldText = document.querySelector("#goldText");
 const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
-const locations = [];
 
-// create cat objects
-const cat = {
-    name: "Whiskers"
-};
-console.log(cat);
+
+const locations = [
+    //add town square location object
+    {
+        name:"town square",
+        "button text": ["Got to store", "Go to cave", "Fight dragon"],
+        "button functions" : [goStore, goCave, fightDragon],
+        text: "You are in the town square. You see a sign that says \"Store\"."
+    }
+];
+
+
 
 function update(location){
 
