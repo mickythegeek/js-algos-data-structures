@@ -28,8 +28,11 @@ function goStore(){
     button1.onclick = buyHealth;
     button2.onclick = buyWeapon;
     button3.onclick = goTownSquare;
-}
 
+    // update text
+    text.innerText = "You enter the score";
+
+}
 function goCave(){
     console.log("Going to cave.")
     
