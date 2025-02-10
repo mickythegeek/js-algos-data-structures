@@ -121,6 +121,9 @@ function buyWeapon() {
     gold -= 30;
     // add weapon to inventory
     currentWeaponIndex ++;
+
+    goldText.innerText = gold;
+    text.innerText = "You bought a new weapon.";
   }
 }
 function fightSlime() {}
