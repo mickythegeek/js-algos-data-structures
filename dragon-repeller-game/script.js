@@ -25,6 +25,12 @@ const locations = [
         "button text": ["Got to store", "Go to cave", "Fight dragon"],
         "button functions" : [goStore, goCave, fightDragon],
         text: "You are in the town square. You see a sign that says \"Store\"."
+    },
+    {
+        name: "store",
+        "button text": ["Buy 10 health (10 gold)", "Buy weapon (30 gold)", "Go to town square"],
+        "button functions": [buyHealth, buyWeapon, goTownSquare],
+        text: "You enter the store."
     }
 ];
 
