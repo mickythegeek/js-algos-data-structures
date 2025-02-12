@@ -125,8 +125,10 @@ function buyWeapon() {
     goldText.innerText = gold;
     
     // update text to show player bought a new weapon
-    let newWeapon = weapons[currentWeaponIndex];
-    text.innerText = "You bought a new weapon.";
+    let newWeapon = weapons[currentWeaponIndex].name;
+    text.innerText = "You now have a " + newWeapon + ".";
+    // add weapon to inventory
+    inventory.push(newWeapon);
   }
 }
 function fightSlime() {}
