@@ -148,6 +148,8 @@ function sellWeapon(){
   if(inventory.length > 1){
     gold += 15;
     goldText.innerText = gold;
+    // remove weapon from inventory
+    let currentWeapon = inventory.shift();
   }
 }
 function fightSlime() {}
