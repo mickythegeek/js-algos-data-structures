@@ -20,49 +20,51 @@ const monsterHealthText = document.querySelector("#monsterHealth");
 const weapons = [
   {
     name: "stick",
-    power: 5
+    power: 5,
   },
   {
     name: "dagger",
-    power: 30
+    power: 30,
   },
   {
     name: "claw hammer",
-    power: 50
+    power: 50,
   },
   {
     name: "sword",
-    power: 100
-  }
+    power: 100,
+  },
 ];
 const locations = [
-    //add town square location object
-    {
-        name:"town square",
-        "button text": ["Got to store", "Go to cave", "Fight dragon"],
-        "button functions" : [goStore, goCave, fightDragon],
-        text: "You are in the town square. You see a sign that says \"Store\"."
-    },
-    // add store location object
-    {
-        name: "store",
-        "button text": ["Buy 10 health (10 gold)", "Buy weapon (30 gold)", "Go to town square"],
-        "button functions": [buyHealth, buyWeapon, goTownSquare],
-        text: "You enter the store."
-    },
-    // add cave location object
-    {
-      name: "cave",
-      "button text" : ["Fight slime", "Fight fanged beast", "Go to town square"],
-      "button functions" : [fightSlime, fightBeast, goTownSquare],
-      text: "You enter the cave. You see some monsters"
-    }
+  //add town square location object
+  {
+    name: "town square",
+    "button text": ["Got to store", "Go to cave", "Fight dragon"],
+    "button functions": [goStore, goCave, fightDragon],
+    text: 'You are in the town square. You see a sign that says "Store".',
+  },
+  // add store location object
+  {
+    name: "store",
+    "button text": [
+      "Buy 10 health (10 gold)",
+      "Buy weapon (30 gold)",
+      "Go to town square",
+    ],
+    "button functions": [buyHealth, buyWeapon, goTownSquare],
+    text: "You enter the store.",
+  },
+  // add cave location object
+  {
+    name: "cave",
+    "button text": ["Fight slime", "Fight fanged beast", "Go to town square"],
+    "button functions": [fightSlime, fightBeast, goTownSquare],
+    text: "You enter the cave. You see some monsters",
+  },
 ];
 
-
-
-function update(location){
-    // change text
+function update(location) {
+  // change text
   button1.innerText = location["button text"][0];
   button2.innerText = location["button text"][1];
   button3.innerText = location["button text"][2];
@@ -83,11 +85,11 @@ button3.onclick = fightDragon;
 
 // Add town square location object and update function"
 function goTownSquare() {
-    update(locations[0])
+  update(locations[0]);
 }
 
 function goStore() {
-    update(locations[1])
+  update(locations[1]);
 }
 
 function goCave() {
@@ -98,49 +100,48 @@ function fightDragon() {
   console.log("FIghting dragon.");
 }
 
-
 // create functions for buttons
 function buyHealth() {
-  if (gold >= 10){
+  if (gold >= 10) {
     // reduce player gold by 10
-  gold -= 10;
-  // increase player health by 10
-  health += 10;
-  // update text for gold and health
-  goldText.innerText = gold;
-  healthText.innerText = health;
+    gold -= 10;
+    // increase player health by 10
+    health += 10;
+    // update text for gold and health
+    goldText.innerText = gold;
+    healthText.innerText = health;
 
-  // update text to show player does not have enough gold
-  } else{
+    // update text to show player does not have enough gold
+  } else {
     text.innerText = "You do not have enough gold to buy health.";
-   }
-  
+  }
 }
 function buyWeapon() {
-  if (currentWeaponIndex < weapons.length - 1){
-    if (gold >= 30){
-    gold -= 30;
-    // add weapon to inventory
-    currentWeaponIndex ++;
+  if (currentWeaponIndex < weapons.length - 1) {
+    if (gold >= 30) {
+      gold -= 30;
+      // add weapon to inventory
+      currentWeaponIndex++;
 
-    goldText.innerText = gold;
-    
-    // update text to show player bought a new weapon
-    let newWeapon = weapons[currentWeaponIndex].name;
-    text.innerText = "You now have a " + newWeapon + ".";
-    // add weapon to inventory
-    inventory.push(newWeapon);
-    text.innerText += " In your inventory you have: " + inventory.join(", ");
-    
-    // update text to show player does not have enough gold
-  }else{
-    text.innerText = "You do not have enough gold to buy a weapon.";
-  }
-  // update text to show player has the best weapon
-  } else{
+      goldText.innerText = gold;
+
+      // update text to show player bought a new weapon
+      let newWeapon = weapons[currentWeaponIndex].name;
+      text.innerText = "You now have a " + newWeapon + ".";
+      // add weapon to inventory
+      inventory.push(newWeapon);
+      text.innerText += " In your inventory you have: " + inventory.join(", ");
+
+      // update text to show player does not have enough gold
+    } else {
+      text.innerText = "You do not have enough gold to buy a weapon.";
+    }
+    // update text to show player has the best weapon
+  } else {
     text.innerText = "You already have the best weapon.";
+    button2.innerText = "Sell weapon for 15 gold";
+    button2.onclick = sellWeapon;
   }
-  
 }
 function fightSlime() {}
 function fightBeast() {}
