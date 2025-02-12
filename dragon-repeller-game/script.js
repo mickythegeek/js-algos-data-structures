@@ -150,6 +150,8 @@ function sellWeapon(){
     goldText.innerText = gold;
     // remove weapon from inventory
     let currentWeapon = inventory.shift();
+    // update text to show player sold weapon
+    text.innerText = "You sold your " + currentWeapon + ".";
   }
 }
 function fightSlime() {}
