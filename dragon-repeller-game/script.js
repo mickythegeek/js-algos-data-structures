@@ -152,6 +152,10 @@ function sellWeapon(){
     let currentWeapon = inventory.shift();
     // update text to show player sold weapon
     text.innerText = "You sold your " + currentWeapon + ".";
+
+    text.innerText += " In your inventory you have: " + inventory;
+  } else{
+    text.innerText = "You cannot sell your last weapon.";
   }
 }
 function fightSlime() {}
