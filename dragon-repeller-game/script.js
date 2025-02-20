@@ -80,6 +80,13 @@ const locations = [
     "button functions": [fightSlime, fightBeast, goTownSquare],
     text: "You enter the cave. You see some monsters",
   },
+  // add fight location object
+  {
+    name : "fight",
+    "button text": ["Attack", "Dodge", "Run"],
+    "button functions": [attack, dodge, goTownSquare],
+    text: "You are fighting a monster."
+  }
 ];
 
 function update(location) {
