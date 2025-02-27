@@ -310,7 +310,9 @@ function easterEgg(){
 
 function pick(guess){
   const numbers = []; // create empty array to store random numbers
-
+  while(numbers.length < 10){
+    numbers.push(Math.floor(Math.random()* 11)) // add random number between 0 and 10 to numbers array
+  }
 }
 
 function pickTwo(){
