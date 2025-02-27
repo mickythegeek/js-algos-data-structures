@@ -229,7 +229,9 @@ function attack(){
   text.innerText = "The " + monsters[fighting].name + " attacks";
   text.innerText += " You attack it with your " + weapons[currentWeaponIndex];
   health -= getMonsterAttackValue(monsters[fighting].level);
-  monsterHealth -= weapons[currentWeaponIndex].power + Math.floor(Math.random() * xp) + 1;
+  if(isMonsterHit()){ // check if player hits monster
+    monsterHealth -= weapons[currentWeaponIndex].power + Math.floor(Math.random() * xp) + 1;
+  }
   healthText.innerText = health;
   monsterHealthText.innerText = monsterHealth;
   if(health <= 0){
@@ -247,7 +249,7 @@ function attack(){
 // create function to get monster attack value
 function getMonsterAttackValue(level){
   const hit = (level * 5) - (Math.floor(Math.random()* xp)); // calculate monster attack value
-
+  return hit > 0 ? hit : 0; // return attack value if it is greater than 0, otherwise return 0
 }
 
 function dodge(){
