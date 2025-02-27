@@ -116,7 +116,7 @@ function update(location) {
   button3.onclick = location["button functions"][2];
 
   // update text
-  text.innerText = location.text;
+  text.innerHTML = location.text; // use innerHTML to render the unicode character for skull
 }
 
 // initialize buttons
