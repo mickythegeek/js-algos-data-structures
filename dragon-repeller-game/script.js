@@ -228,7 +228,12 @@ function attack(){
   if(health <= 0){
     lose();
   } else if(monsterHealth <= 0){
-    win(); 
+    // check if player has defeated the dragon
+    if(fighting === 2){
+      winGame();
+    } else{
+      win();
+    }
   }
 }
 
