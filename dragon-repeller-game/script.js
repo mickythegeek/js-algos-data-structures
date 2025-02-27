@@ -231,6 +231,7 @@ function dodge(){
 }
 
 function lose(){
+  update[locations[5]];
 
 }
 
@@ -241,4 +242,16 @@ function win(){
   xpText.innerText = xp;
   update(locations[4]);
 
+}
+// create function to restart game
+function restart(){
+  xp = 0;
+  health = 100;
+  gold = 250;
+  currentWeaponIndex = 0;
+  inventory = ["stick"];
+  goldText.innerText = gold;
+  healthText.innerText = health;
+  xpText.innerText = xp;
+  goTownSquare();
 }
