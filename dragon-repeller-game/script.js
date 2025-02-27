@@ -246,6 +246,11 @@ function attack(){
       win();
     }
   }
+  //Player current weapon breaks while hitting monster
+  if(Math.random() <= .1){
+    text.innerText += " Your " + inventory.pop() + " breaks.";
+    currentWeaponIndex--;
+  }
 }
 
 // create function to get monster attack value
@@ -256,7 +261,7 @@ function getMonsterAttackValue(level){
 
 // create function to check if monster is hit
 function isMonsterHit(){
-  return Math.random() > .2;
+  return Math.random() > .2 || health < 20;
 }
 
 function dodge(){
