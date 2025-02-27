@@ -317,6 +317,13 @@ function pick(guess){
   for (let i=0; i<10;i++){
     text.innerText += numbers[i] + "\n"; // add each random number to text
   }
+  // check if player guess is in random numbers
+  if(numbers.includes(guess)){
+    text.innerText += "WOW! You win 20 gold";
+    gold += 20;
+    goldText.innerText = gold;
+
+  }
 
 }
 
