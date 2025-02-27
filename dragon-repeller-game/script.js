@@ -89,10 +89,17 @@ const locations = [
   },
   {
     //
-    name: "kill monster",
+    name: "win",
     "button text" : ["Go to town square", "Go to town square", "Go to town square"],
     "button functions": [goTownSquare, goTownSquare, goTownSquare],
     text: 'The monster screams "Arg!" as it dies. YOu gain experience and find gold.'
+  },
+  {
+    // add lose location object
+    name: "lose",
+    "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
+    "button functions": [restart, restart, restart],
+    text: "You die. &#x2620;"
   }
 ];
 
