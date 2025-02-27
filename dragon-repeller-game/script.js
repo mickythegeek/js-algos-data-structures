@@ -92,12 +92,13 @@ const locations = [
     name: "kill monster",
     "button text" : ["Go to town square", "Go to town square", "Go to town square"],
     "button functions": [goTownSquare, goTownSquare, goTownSquare],
-    text: "The monster screams Arg! as it dies. YOu gain experience and find gold.";
+    text: 'The monster screams "Arg!" as it dies. YOu gain experience and find gold.'
   }
 ];
 
 function update(location) {
   // change text
+  monsterStats.style.display = 'none'; // hide monster stats
   button1.innerText = location["button text"][0];
   button2.innerText = location["button text"][1];
   button3.innerText = location["button text"][2];
