@@ -246,6 +246,7 @@ function attack(){
 
 // create function to get monster attack value
 function getMonsterAttackValue(level){
+  const hit = (level * 5) - (Math.floor(Math.random()* xp)); // calculate monster attack value
 
 }
 
