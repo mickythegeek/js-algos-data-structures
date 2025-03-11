@@ -91,7 +91,7 @@ const locations = [
     //
     name: "win",
     "button text" : ["Go to town square", "Go to town square", "Go to town square"],
-    "button functions": [goTownSquare, goTownSquare, goTownSquare],
+    "button functions": [goTownSquare, goTownSquare, easterEgg],
     text: 'The monster screams "Arg!" as it dies. YOu gain experience and find gold.'
   },
   {
@@ -322,7 +322,14 @@ function pick(guess){
     text.innerText += "WOW! You win 20 gold";
     gold += 20;
     goldText.innerText = gold;
-
+  }else{
+    // update text to show player did not win
+    text.innerText += "Sorry! You lose 10 health.";
+    health -= 10;
+    healthText.innerText = health;
+    if(health<= 0){
+      lose();
+    }
   }
 
 }
