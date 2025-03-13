@@ -3,12 +3,12 @@ const darkColorsArr = [
     "#34495e",
     "#2c2c2c",
     "#616A6b",
-    "4a235a",
+    "#4a235a",
     "#2f4f4f",
-    "0e4b5a",
-    "36454f",
-    "2c3e50",
-    "800020",
+    "#0e4b5a",
+    "#36454f",
+    "#2c3e50",
+    "#800020",
 ];
 
 // Get random index
@@ -27,9 +27,11 @@ console.log(bgHexCodeSpanElement);
 
 
 function changeBackgroundColor(){
-    const color = darkColorsArr[getRandomIndex];
+    const color = darkColorsArr[getRandomIndex()];
     bgHexCodeSpanElement.innerText = color;
     body.style.backgroundColor = color
 }
 
+const btn = document.querySelector("#btn");
+console.log(btn)
 changeBackgroundColor();
