@@ -13,7 +13,11 @@ const darkColorsArr = [
 
 // Get random index
 function getRandomIndex(){
-    console.log(darkColorsArr.length * Math.random())
+    console.log(Math.floor(darkColorsArr.length * Math.random()));
+    const randomIndex = Math.floor(darkColorsArr.length * Math.random());
+    return randomIndex;
 }
 
 getRandomIndex();
+
+const body = document.querySelector("body"); 
