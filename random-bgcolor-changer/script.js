@@ -31,3 +31,5 @@ function changeBackgroundColor(){
     bgHexCodeSpanElement.innerText = color;
     body.style.backgroundColor = color
 }
+
+changeBackgroundColor();
