@@ -10,3 +10,10 @@ const darkColorsArr = [
     "2c3e50",
     "800020",
 ];
+
+// Get random index
+function getRandomIndex(){
+    console.log(darkColorsArr.length * Math.random())
+}
+
+getRandomIndex();
