@@ -47,6 +47,8 @@ function calculateCalories(e){
     if(isError){
         return; // if there is an error, don't continue
     }
+
+    const consumedCalories = breakfastCalories + lunchCalories + dinnerCalories + snacksCalories;
 }
 
 function getCaloriesFromInputs(list){
