@@ -29,6 +29,14 @@ function addEntry(){
     targetInputContainer.insertAdjacentHTML('beforeend', HTMLString);
 }
 
+function calculateCalories(e){
+    e.preventDefault();
+    isError = false;
+    const breakfastNumberInputs = document.querySelectorAll("#breakfast input[type='number]");
+    
+
+}
+
 function getCaloriesFromInput(list){
     let calories = 0;
     for (const item of list){
