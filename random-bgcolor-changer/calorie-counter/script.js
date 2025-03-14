@@ -44,6 +44,9 @@ function calculateCalories(e){
     const snacksCalories = getCaloriesFromInputs(snacksNumberInputs);
     const exerciseCalories = getCaloriesFromInputs(exerciseNumberInputs);
     const budgetCalories = getCaloriesFromInputs([budgetNumberInput]);
+    if(isError){
+        return; // if there is an error, don't continue
+    }
 }
 
 function getCaloriesFromInputs(list){
