@@ -11,9 +11,9 @@ function cleanInputString(str){
     return str.replace(regex, "");
 }
 
-function isInvalidInput(str){
+function isInvalidInput(str){ // returns true if the input is invalid
     const regex = /\d+e\d+/i;
-    return str.match(regex);
+    return str.match(regex); // returns null if no match is found
 
 }
 
@@ -31,6 +31,15 @@ function addEntry(){
 
 function getCaloriesFromInput(list){
     let calories = 0;
+    for (const item of list){
+        const currVal = cleanInputString(item.value);
+        const invalidInputMatch = isInvalidInput(currVal);
+        if(invalidInputMatch){
+            alert(`Invalid Input: ${invalidInputMatch[0]}`);
+
+        }
+
+    }
 
 }
 
